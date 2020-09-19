@@ -24,6 +24,7 @@ public class LevelGenerator : MonoBehaviour
                     {1,2,2,2,2,2,2,2,2,2,2,2,2,7,7,2,2,2,2,2,2,2,2,2,2,2,2,1},
                     {2,5,5,5,5,5,5,5,5,5,5,5,5,4,4,5,5,5,5,5,5,5,5,5,5,5,5,2},
                     {2,5,3,4,4,3,5,3,4,4,4,3,5,4,4,5,3,4,4,4,3,5,3,4,4,3,5,2},
+                    {2,6,4,0,0,4,5,4,0,0,0,4,5,4,4,5,4,0,0,0,4,5,4,0,0,4,6,2},
                     {2,5,3,4,4,3,5,3,4,4,4,3,5,3,3,5,3,4,4,4,3,5,3,4,4,3,5,2},
                     {2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,2},
                     {2,5,3,4,4,3,5,3,3,5,3,4,4,4,4,4,4,3,5,3,3,5,3,4,4,3,5,2},
@@ -53,15 +54,37 @@ public class LevelGenerator : MonoBehaviour
 };
     void Start()
     {
-        //Debug.Log(levelMap.GetLength(0));//return the row length
-        //Debug.Log(levelMap.GetLength(1));//return the column length
+        Debug.Log(levelMap.GetLength(0));//return the row length
+        Debug.Log(levelMap.GetLength(1));//return the col length
 
         for (int row=0; row < levelMap.GetLength(0); row++) {
             for (int col = 0; col < levelMap.GetLength(1); col++) {
-                int value = levelMap[row, col];
+                int value = levelMap[row,col];
                 switch (value) {
                     case 0:
                         //empty
+                        break;
+    
+                    case 1:
+                        Instantiate(outsideCorner, new Vector3(row+2,col+5), Quaternion.identity, gameObject.transform);
+                        break;
+                    case 2:
+                        Instantiate(outsideWall, new Vector3(row + 2, col + 5), Quaternion.identity, gameObject.transform);
+                        break;
+                    case 3:
+                        Instantiate(insideCorner, new Vector3(row + 2, col + 5), Quaternion.identity, gameObject.transform);
+                        break;
+                    case 4:
+                        Instantiate(insideWall, new Vector3(row + 2, col + 5), Quaternion.identity, gameObject.transform);
+                        break;
+                    case 5:
+                        Instantiate(standardPellet, new Vector3(row + 2, col + 5), Quaternion.identity, gameObject.transform);
+                        break;
+                    case 6:
+                        Instantiate(powerPellet, new Vector3(row + 2, col + 5), Quaternion.identity, gameObject.transform);
+                        break;
+                    case 7:
+                        Instantiate(tJunction, new Vector3(row + 2, col + 5), Quaternion.identity, gameObject.transform);
                         break;
                 }
 
