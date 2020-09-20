@@ -68,26 +68,26 @@ public class LevelGenerator : MonoBehaviour
     
                     case 1:
                         //Instantiate(outsideCorner, new Vector3(col+5, row + 2), Quaternion.identity, gameObject.transform);
-                        Instantiate(outsideCorner, new Vector3(col + 5, -row + 2), checkAround(row, col, 1), gameObject.transform);
+                        Instantiate(outsideCorner, new Vector3(col, -row+14), checkAround(row, col, 1), gameObject.transform);
                         break;
                     case 2:
                         //Instantiate(outsideWall, new Vector3(col + 5, row + 2), Quaternion.identity, gameObject.transform);
-                        Instantiate(outsideWall, new Vector3(col + 5, -row + 2), checkAround(row, col, 2), gameObject.transform);
+                        Instantiate(outsideWall, new Vector3(col, -row+14), checkAround(row, col, 2), gameObject.transform);
                         break;
                     case 3:
-                        Instantiate(insideCorner, new Vector3(col + 5, -row + 2), checkAround(row, col, 3), gameObject.transform);
+                        Instantiate(insideCorner, new Vector3(col, -row+14), checkAround(row, col, 3), gameObject.transform);
                         break;
                     case 4:
-                        Instantiate(insideWall, new Vector3(col + 5, -row + 2), checkAround(row, col, 4), gameObject.transform);
+                        Instantiate(insideWall, new Vector3(col, -row+14), checkAround(row, col, 4), gameObject.transform);
                         break;
                     case 5:
-                        Instantiate(standardPellet, new Vector3(col + 5, -row + 2), Quaternion.identity, gameObject.transform);
+                        Instantiate(standardPellet, new Vector3(col, -row+14), Quaternion.identity, gameObject.transform);
                         break;
                     case 6:
-                        Instantiate(powerPellet, new Vector3(col + 5, -row + 2), Quaternion.identity, gameObject.transform);
+                        Instantiate(powerPellet, new Vector3(col, -row+14), Quaternion.identity, gameObject.transform);
                         break;
                     case 7:
-                        Instantiate(tJunction, new Vector3(col + 5, -row + 2), checkAround(row, col, 7), gameObject.transform);
+                        Instantiate(tJunction, new Vector3(col, -row+14), checkAround(row, col, 7), gameObject.transform);
                         break;
                 }
 
