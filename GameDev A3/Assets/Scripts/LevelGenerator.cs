@@ -53,8 +53,8 @@ public class LevelGenerator : MonoBehaviour
 };
     void Start()
     {
-        Debug.Log(levelMap.GetLength(0));//return the row length
-        Debug.Log(levelMap.GetLength(1));//return the col length
+        //Debug.Log(levelMap.GetLength(0));//return the row length
+        //Debug.Log(levelMap.GetLength(1));//return the col length
         //checkAround(2, 2, 3);
 
         for (int row=0; row < levelMap.GetLength(0); row++) {

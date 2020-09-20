@@ -32,8 +32,9 @@ public class AudioChange : MonoBehaviour
     {
         if (timer >= 0.6) {
             timer = 0;
-            audioController.PlayOneShot(pacMan_walk);
-            audioController.volume = 0.1f;
+
+            audioController.PlayOneShot(pacMan_walk,0.1f);
+            //audioController.volume = 0.05f;
         }
         timer += Time.deltaTime;
     }
