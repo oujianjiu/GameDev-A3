@@ -413,6 +413,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606037f48dd3f4c4cabb5bd292980eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beginning: {fileID: 8300000, guid: 45e197fba58c36e4d9d63d82c4dd142e, type: 3}
+  pacMan_walk: {fileID: 8300000, guid: 168e4f81c0d3f2949a4bf56efd88aa88, type: 3}
+  bgm_normal: {fileID: 8300000, guid: 294204a34f3f7784383db23e17407b28, type: 3}
 --- !u!82 &785563696
 AudioSource:
   m_ObjectHideFlags: 0
